@@ -3,19 +3,19 @@ import Rive, { useRive } from "@rive-app/react-canvas";
 
 import React from "react";
 
-function RiveTest() {
+function RiveComponent() {
   const { rive, RiveComponent } = useRive({
-    src: "/eyesfollowingcursor.riv",
+    src: "/woman.riv",
     stateMachines: "followCursor",
     autoplay: false,
   });
   return (
     <RiveComponent
-      //   style={{ width: "100%", height: "100%" }}
+      // style={{ width: "100%", height: "100%" }}
       onMouseEnter={() => rive && rive.play()}
       onMouseLeave={() => rive && rive.pause()}
     />
   );
 }
 
-export default RiveTest;
+export default RiveComponent;
